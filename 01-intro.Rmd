@@ -1,21 +1,23 @@
-# Introduction {#intro}
+# Введение {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+Вы можете использовать метки для глав и разделов используя `{#label}` после их названия, таким образом вы можете сослаться на Главу \@ref(intro). Если вы не указываете англоязычную метку вручную, то будет присвоена автоматическая метка, т.е., Глава \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Иллюстрации и таблицы с их заголовками также могут быть расположены в окружениях `figure` и `table`, соответственно.
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+```{r nice-fig, fig.cap='Это классный график!', out.width='80%', fig.asp=.75, fig.align='center'}
 par(mar = c(4, 4, .1, .1))
 plot(pressure, type = 'b', pch = 19)
 ```
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Ссылаться на иллюстрацию можно по метке ее кодового фрагмента с префиксом `fig:`, т.е., см. Figure \@ref(fig:nice-fig). Аналогично вы можете ссылаться на таблицы, созданные `knitr::kable()`, т.е., см. Table \@ref(tab:nice-tab).
+
+> Примечание: в русскоязычных текстах все равно нужно писать Figure и Table, поскольку автоматическая замена будет выполнена автоматически позже. (TODO!)
 
 ```{r nice-tab, tidy=FALSE}
 knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
+  head(iris, 20), caption = 'Это классная таблица!',
   booktabs = TRUE
 )
 ```
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+Так же вы можете выполнять цитирование. Например, мы используем пакет **bookdown** [@R-bookdown] в этой простой книге, которая собрана с использованием R Markdown и **knitr** [@xie2015].

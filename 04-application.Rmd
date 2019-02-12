@@ -1,7 +1,7 @@
-# Applications
+# Применения {-#applications}
 
-Some _significant_ applications are demonstrated in this chapter.
+Некоторые _важные_ примемения продемонстированы в этой главе.
 
-## Example one
+## Пример 1
 
-## Example two
+## Пример 2

@@ -1,3 +1,5 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. More detailed instructions are available here https://bookdown.org/yihui/bookdown/build-the-book.html.
+Это минимальный пример книги, созданной с помощью R Markdown и **bookdown** (https://github.com/rstudio/bookdown). Смотрите страницы "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" по адресу https://bookdown.org/yihui/bookdown/ для компиляции этого примера в HTML. Вы можете сгенерировать пример этой книги в формате `bookdown::pdf_book` путем вызова `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. Более подробные инструкции представлены здесь https://bookdown.org/yihui/bookdown/build-the-book.html.
 
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
+Пример англоязычного варианта этого примера представлен по адресу https://bookdown.org/yihui/bookdown-demo/.
+
+Этот репозиторий первоначалось был склонирован из https://github.com/rstudio/bookdown-demo .
