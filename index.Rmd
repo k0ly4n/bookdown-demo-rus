@@ -53,13 +53,14 @@ header-includes:
 - \setsansfont{CMU Sans Serif}
 - \setmonofont{Courier New}
 - \usepackage[fontsize=14pt]{scrextend}
-- \usepackage[none]{hyphenat} # отключение переносов, но так иногда получаются некоторые строки, выходящие за поля
+#- \usepackage[none]{hyphenat} # отключение переносов, но так иногда получаются некоторые строки, выходящие за поля
 
 ---
 
 # Зависимости
 
-Это _пример_ книги, подготовленной в **Markdown**. Вы можете использовать все, что поддерживает Markdown в Pandoc, например, математическое уравнение  $a^2 + b^2 = c^2$.
+Это _пример_ книги, подготовленной в **Markdown** ![](figs/Markdown-mark.svg.png).  
+Вы можете использовать все, что поддерживает Markdown в Pandoc, например, математическое уравнение  $a^2 + b^2 = c^2$.
 
 Пакет **bookdown** может быть установлен из CRAN или Github:
 
@@ -71,7 +72,7 @@ install.packages("bookdown")
 
 Учтите, что каждый Rdm-файл содержит только одну главу, она определяется по заголовку первого уровня `#`.
 
-Для компиляции этого примера в PDF вам потребуется XeLaTeX. Для этого рекомендуется установить TinyTeX (который включает XeLaTeX): <https://yihui.name/tinytex/>.
+Для компиляции этого примера в PDF вам потребуется XeLaTeX. Для этого рекомендуется установить TeXLive <https://www.tug.org/texlive/acquire-netinstall.html>.
 
 ```{r include=FALSE}
 # автоматически создаем базу данных bib для пакетов R
