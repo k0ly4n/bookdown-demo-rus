@@ -590,8 +590,8 @@ RMarkdown позволяет объединять в одном документ
 
 1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команды в окне *Console*:
 
-        install.packages("devtools")
-        devtools::install_github("rstudio/bookdown")
+      install.packages("devtools")
+      devtools::install_github("rstudio/bookdown")
 
     и закрыть RStudio.
 
@@ -617,35 +617,35 @@ RMarkdown позволяет объединять в одном документ
 
 1. Для получения наиболее свежей версии R следует подключить официальный репозиторий проекта с помощью следующих команд в терминале:
 
-        cat <<EOF | sudo tee /etc/apt/sources.list.d/r-cran.list
-        deb https://cloud.r-project.org/bin/linux/ubuntu xenial/
-        EOF
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+       cat <<EOF | sudo tee /etc/apt/sources.list.d/r-cran.list
+       deb https://cloud.r-project.org/bin/linux/ubuntu xenial/
+       EOF
+       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
         
-        sudo apt-get update
+       sudo apt-get update
     
-        sudo apt-get install r-base-dev libssl-dev libjpeg62 libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 calibre
+       sudo apt-get install r-base-dev libssl-dev libjpeg62 libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 calibre
     
 1. Установить компоненты TeXLive с помощью команд
 
-        sudo apt-get install biber texlive-lang-cyrillic fonts-cmu texlive-xetex texlive-fonts-extra texlive-math-extra font-manager ttf-mscorefonts-installer lmodern
+       sudo apt-get install biber texlive-lang-cyrillic fonts-cmu texlive-xetex texlive-fonts-extra texlive-math-extra font-manager ttf-mscorefonts-installer lmodern
 
 1. Установить следующие зависимости для сборки специализированных пакетов для R:
 
-        sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev libcairo2-dev
+       sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev libcairo2-dev
 
 1. Скачать RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/#download) и установить пакет *rstudio-xenial-...-amd64.deb* с помощью графической программы GDebi.
 
 1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команды в окне *Console*:
 
-        install.packages("devtools")
-        devtools::install_github("rstudio/bookdown")
+       install.packages("devtools")
+       devtools::install_github("rstudio/bookdown")
 
     и закрыть RStudio.
 
 1. Для подготовки первого RMarkdown документа следует клонировать [демонстрационный репозиторий](https://github.com/rstudio/bookdown-demo) с помощью Git - выполнить в терминале в удобном каталоге команду 
 
-        git clone https://github.com/rstudio/bookdown-demo.git
+       git clone https://github.com/rstudio/bookdown-demo.git
 
 1. Перейти в только что созданный каталог `bookdown-demo` и выполнить двойной щелчок мышью по файлу `bookdown-demo.Rproj` для открытия проекта книги в RStudio.
 

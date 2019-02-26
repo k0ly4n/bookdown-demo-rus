@@ -1,0 +1,12 @@
+stages:
+  - compile
+  - package
+
+compile:
+  stage: compile
+  script:  
+  - sh ./_build.sh
+  - tar cfJ book.tar.xz *.html _book/
+  artifacts:
+    paths:
+    - book.tar.xz
