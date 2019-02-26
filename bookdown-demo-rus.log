@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2019.2.26)  26 FEB 2019 17:54
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2019.2.26)  26 FEB 2019 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1636,13 +1636,13 @@ Overfull \hbox (146.60046pt too wide) in paragraph at lines 861--861
  []
 
 [21]
-Underfull \hbox (badness 1460) in paragraph at lines 887--888
+Underfull \hbox (badness 1460) in paragraph at lines 888--889
 []\EU1/TimesNewRoman(0)/m/n/14 RMarkdown позволяет объединять в одном документе
  расчеты и
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--897
+Underfull \hbox (badness 10000) in paragraph at lines 894--898
 
  []
 
@@ -1653,7 +1653,7 @@ Overfull \hbox (14.98018pt too wide) has occurred while \output is active
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 949--951
+Underfull \hbox (badness 10000) in paragraph at lines 950--952
 \EU1/TimesNewRoman(0)/m/it/14 Chinese\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesN
 ewRoman(0)/m/it/14 Chinese/Japanese/Korean (base)\EU1/TimesNewRoman(0)/m/n/14 ,
  \EU1/TimesNewRoman(0)/m/it/14 Czech/Slovak\EU1/TimesNewRoman(0)/m/n/14 , \EU1/
@@ -1661,7 +1661,7 @@ TimesNewRoman(0)/m/it/14 Other
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 949--951
+Underfull \hbox (badness 2980) in paragraph at lines 950--952
 \EU1/TimesNewRoman(0)/m/it/14 European languages\EU1/TimesNewRoman(0)/m/n/14 , 
 \EU1/TimesNewRoman(0)/m/it/14 French\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesNe
 wRoman(0)/m/it/14 German\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesNewRoman(0)/m/
@@ -1671,7 +1671,7 @@ NewRoman(0)/m/n/14 ,
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 949--951
+Underfull \hbox (badness 1968) in paragraph at lines 950--952
 \EU1/TimesNewRoman(0)/m/it/14 Korean\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesNe
 wRoman(0)/m/it/14 Other languages\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesNewRo
 man(0)/m/it/14 Polish\EU1/TimesNewRoman(0)/m/n/14 , \EU1/TimesNewRoman(0)/m/it/
@@ -1680,31 +1680,31 @@ sh \EU1/TimesNewRoman(0)/m/n/14 и нажать
  []
 
 [23]
-Underfull \hbox (badness 7963) in paragraph at lines 972--974
+Underfull \hbox (badness 7963) in paragraph at lines 973--975
 []\EU1/TimesNewRoman(0)/bx/n/14 Примечание: \EU1/TimesNewRoman(0)/m/n/14 возмож
 но появление окна \EU1/TimesNewRoman(0)/m/it/14 Install Required
  []
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 979--981
+Underfull \hbox (badness 3815) in paragraph at lines 980--982
 []\EU1/TimesNewRoman(0)/bx/n/14 Примечание: \EU1/TimesNewRoman(0)/m/n/14 если т
 ребуется подготовка книги в EPUB-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 979--981
+Underfull \hbox (badness 10000) in paragraph at lines 980--982
 \EU1/TimesNewRoman(0)/m/n/14 формате (\EU1/TimesNewRoman(0)/m/it/14 bookdown:ep
 ub_book\EU1/TimesNewRoman(0)/m/n/14 ), то для просмотра этого
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 979--981
+Underfull \hbox (badness 2181) in paragraph at lines 980--982
 \EU1/TimesNewRoman(0)/m/n/14 формата нужно установить дополнительный просмотрщи
 к.
  []
 
 
-Overfull \hbox (42.77945pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (42.77945pt too wide) in paragraph at lines 1006--1006
  [] \EU1/CourierNew(0)/m/n/14 cat <<EOF | sudo tee /etc/apt/sources.list.d/r-cr
 an.list[] 
  []
@@ -1716,44 +1716,44 @@ Overfull \hbox (14.98018pt too wide) has occurred while \output is active
  []
 
 [24]
-Overfull \hbox (51.18079pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (51.18079pt too wide) in paragraph at lines 1006--1006
  [] \EU1/CourierNew(0)/m/n/14 deb https://cloud.r-project.org/bin/linux/ubuntu 
 xenial/[] 
  []
 
 
-Overfull \hbox (157.59814pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (157.59814pt too wide) in paragraph at lines 1006--1006
  [] \EU1/CourierNew(0)/m/n/14 sudo apt-key adv --keyserver keyserver.ubuntu.com
  --recv-keys E084DAB9[] 
  []
 
 
-Overfull \hbox (496.45331pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (496.45331pt too wide) in paragraph at lines 1006--1006
  [] \EU1/CourierNew(0)/m/n/14 sudo apt-get install r-base-dev libssl-dev libjpe
 g62 libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 calibre[] 
  []
 
 
-Overfull \hbox (882.91623pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (882.91623pt too wide) in paragraph at lines 1012--1012
  [] \EU1/CourierNew(0)/m/n/14 sudo apt-get install biber texlive-lang-cyrillic 
 fonts-cmu texlive-xetex texlive-fonts-extra texlive-math-extra font-manager ttf
 -mscorefonts-installer lmodern[] 
  []
 
 
-Overfull \hbox (266.81592pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (266.81592pt too wide) in paragraph at lines 1018--1018
  [] \EU1/CourierNew(0)/m/n/14 sudo apt-get install build-essential libcurl4-ope
 nssl-dev libxml2-dev libcairo2-dev[] 
  []
 
 
-Overfull \hbox (34.37805pt too wide) in paragraph at lines 1034--1034
+Overfull \hbox (34.37805pt too wide) in paragraph at lines 1035--1035
  [] \EU1/CourierNew(0)/m/n/14 git clone https://github.com/rstudio/bookdown-dem
 o.git[] 
  []
 
 [25]
-Underfull \hbox (badness 1132) in paragraph at lines 1046--1047
+Underfull \hbox (badness 1132) in paragraph at lines 1047--1048
 []\EU1/TimesNewRoman(0)/m/n/14 Для Windows нужно установить []Python 3[] (поста
 вив галочку \EU1/TimesNewRoman(0)/m/it/14 Add
  []
@@ -1765,26 +1765,26 @@ Overfull \hbox (14.98018pt too wide) has occurred while \output is active
  []
 
 [26]
-Underfull \hbox (badness 6708) in paragraph at lines 1085--1086
+Underfull \hbox (badness 6708) in paragraph at lines 1086--1087
 []\EU1/TimesNewRoman(0)/m/n/14 RStudio использует Pandoc для преобразования док
 ументов из
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 1085--1086
+Underfull \hbox (badness 1472) in paragraph at lines 1086--1087
 \EU1/TimesNewRoman(0)/m/n/14 Markdown в другие форматы. Поэтому формулы оказыва
 ются преоб-
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 1093--1097
+Underfull \hbox (badness 1688) in paragraph at lines 1094--1098
 \EU1/TimesNewRoman(0)/m/n/14 в области \EU1/TimesNewRoman(0)/m/it/14 Convert eq
 uations to \EU1/TimesNewRoman(0)/m/n/14 выбрать \EU1/TimesNewRoman(0)/m/it/14 M
 athType equations (OLE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1097
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1098
 
  []
 
@@ -1814,18 +1814,18 @@ Overfull \hbox (14.98018pt too wide) has occurred while \output is active
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1148.
 [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1147.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1148.
 (./bookdown-demo-rus.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1147.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1147.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1147.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1148.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1148.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1148.
  ) 
 Here is how much of TeX's memory you used:
  28616 strings out of 494829
  501439 string characters out of 6178620
- 649352 words of memory out of 5000000
+ 649362 words of memory out of 5000000
  31560 multiletter control sequences out of 15000+600000
  13304 words of font info for 115 fonts, out of 8000000 for 9000
  684 hyphenation exceptions out of 8191

@@ -18,7 +18,7 @@ output:
         before: |
           <li><a href="./">Пример книги</a></li>
         after: |
-          <li><a href="https://github.com/rstudio/bookdown" target="blank">подготовлено с использованием bookdown</a></li>
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
       edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
       download: ["pdf", "epub"]
   bookdown::pdf_book:

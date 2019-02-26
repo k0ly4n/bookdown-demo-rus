@@ -533,6 +533,7 @@ toc-title: "Оглавление"
 output:
   bookdown::word_document2:
     toc: true
+    toc_depth: 5
   bookdown::html_document2:
     toc: true
     toc_depth: 5
