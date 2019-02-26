@@ -1,9 +1,8 @@
 book_filename: "bookdown-demo-rus"
 language:
-  ui:
-    chapter_name: "Глава "
-    label:
-      fig: 'Рисунок '
-      tab: 'Таблица '
+  label:
+    fig: 'Рисунок '
+    tab: 'Таблица '
+    exm: 'Листинг '
 
-delete_merged_file: true
+delete_merged_file: yes

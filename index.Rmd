@@ -1,23 +1,22 @@
---- 
-title: "Минимальный пример книги"
-author: "Стрелков Н.О. (автор оригинала Yihui Xie)"
+---
+title: <center>Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ</center>
+author: <center>Н.О. Стрелков, В.В. Крутских</center>
 date: "`r Sys.Date()`"
 
-documentclass: book
 papersize: a4
 geometry: 'left=1.06in, right=1.06in, top=0.79in, bottom=1.18in'
 
+documentclass: book
+toc-title: "Содержание"
+
 site: bookdown::bookdown_site
-
-description: "Это минимальный пример использования пакета bookdown для подготовки книги. Выходной формат для этого примера - bookdown::gitbook."
-
 output:
   bookdown::gitbook:
     css: style.css
     config:
       toc:
         before: |
-          <li><a href="./">Минимальный пример книги</a></li>
+          <li><a href="./">Пример книги</a></li>
         after: |
           <li><a href="https://github.com/rstudio/bookdown" target="blank">подготовлено с использованием bookdown</a></li>
       edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
@@ -25,11 +24,15 @@ output:
   bookdown::pdf_book:
     latex_engine: xelatex
     keep_tex: yes
+    toc_depth: 5
   bookdown::pdf_document2:
+    template: null
     dev: tikz
     keep_tex: yes
-    number_sections: no
+    fig_caption: yes
+    number_sections: yes
     latex_engine: xelatex
+    toc_depth: 5
   bookdown::html_document2: 
     toc: true
     toc_float: true
@@ -37,14 +40,15 @@ output:
     toc_depth: 5
   bookdown::epub_book: default
   bookdown::word_document2:
-    reference_docx: styles_reference.docx
-    toc: yes
+    reference_docx: styles-reference.docx
+    toc: true
+    toc_depth: 5
+indent: true
 
-csl: gost-r-7-0-5-2008-numeric.csl
-bibliography: [book.bib, packages.bib]
-#biblio-style: apalike
+bibliography: bibliography.bib
 link-citations: yes
 
+csl: gost-r-7-0-5-2008-numeric.csl
 header-includes:
 - \usepackage[main=russian,english]{babel}
 - \usepackage{fontspec}
@@ -54,29 +58,12 @@ header-includes:
 - \setmonofont{Courier New}
 - \usepackage[fontsize=14pt]{scrextend}
 #- \usepackage[none]{hyphenat} # отключение переносов, но так иногда получаются некоторые строки, выходящие за поля
+- \usepackage{indentfirst}
+- \setlength\parindent{10mm}
 
 ---
 
-# Зависимости
+# Аннотация {-#abstract}
 
-Это _пример_ книги, подготовленной в **Markdown** ![](figs/Markdown-mark.svg.png).  
-Вы можете использовать все, что поддерживает Markdown в Pandoc, например, математическое уравнение  $a^2 + b^2 = c^2$.
+В настоящей работе рассматривается использование языка разметки Markdown для написания отчетов и дипломных работ. Используется расширение языка RMarkdown с дополнением bookdown. Демонстрируется применимость bookdown для оформления научных работ. Этот документ может быть использован как шаблон для подготовки текста работы.
 
-Пакет **bookdown** может быть установлен из CRAN или Github:
-
-```{r eval=FALSE}
-install.packages("bookdown")
-# или разрабатываемую версию
-# devtools::install_github("rstudio/bookdown")
-```
-
-Учтите, что каждый Rdm-файл содержит только одну главу, она определяется по заголовку первого уровня `#`.
-
-Для компиляции этого примера в PDF вам потребуется XeLaTeX. Для этого рекомендуется установить TeXLive <https://www.tug.org/texlive/acquire-netinstall.html>.
-
-```{r include=FALSE}
-# автоматически создаем базу данных bib для пакетов R
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
