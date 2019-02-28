@@ -1,7 +1,7 @@
 book_filename: "bookdown-demo-rus"
 language:
   label:
-    fig: 'Рисунок '
+    fig: 'Рис. '
     tab: 'Таблица '
     exm: 'Листинг '
 

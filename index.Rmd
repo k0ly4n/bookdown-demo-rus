@@ -4,9 +4,9 @@ author: <center>Н.О. Стрелков, В.В. Крутских</center>
 date: "`r Sys.Date()`"
 
 papersize: a4
-geometry: 'left=1.06in, right=1.06in, top=0.79in, bottom=1.18in'
+geometry: 'left=2cm, right=1cm, top=2cm, bottom=2cm, twoside=false'
 
-documentclass: book
+documentclass: article
 toc-title: "Содержание"
 
 site: bookdown::bookdown_site
@@ -59,7 +59,7 @@ header-includes:
 - \usepackage[fontsize=14pt]{scrextend}
 #- \usepackage[none]{hyphenat} # отключение переносов, но так иногда получаются некоторые строки, выходящие за поля
 - \usepackage{indentfirst}
-- \setlength\parindent{10mm}
+- \setlength\parindent{12.7mm}
 
 ---
 
