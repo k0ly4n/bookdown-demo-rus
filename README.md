@@ -1,12 +1,6 @@
 # Введение
 
-В этом репозитории расположен пример книги/отчета/диплома, созданного с помощью RMarkdown и bookdown. 
-
-Первоначально это был минимальный пример книги, созданной с помощью R Markdown и **bookdown** (https://github.com/rstudio/bookdown). Смотрите страницы "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" по адресу https://bookdown.org/yihui/bookdown/ для компиляции этого примера в HTML. Вы можете сгенерировать пример этой книги в формате `bookdown::pdf_book` путем вызова `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. Более подробные инструкции представлены здесь https://bookdown.org/yihui/bookdown/build-the-book.html.
-
-Исходный англоязычный вариант представлен по адресу https://bookdown.org/yihui/bookdown-demo/ и был склонирован из https://github.com/rstudio/bookdown-demo .
-
----
+В этом репозитории расположен пример книги/отчета/диплома, созданного с помощью RMarkdown и bookdown (https://github.com/rstudio/bookdown).
 
 # Список файлов и каталогов, их назначение и содержание
 
@@ -25,7 +19,7 @@
 | `60-conclusion.Rmd` | *Заключение* |
 | `90-appendix.Rmd` | *Приложения* |
 | `99-references.Rmd` | *Список использованных источников* (создается автоматически, по сути содержит только заголовок) |
-| `bibliography.bib` | Список библиографических ссылокв в формате [BibTex](https://ru.wikipedia.org/wiki/BibTeX) |
+| `bibliography.bib` | Список библиографических ссылок в формате [BibTeX](https://ru.wikipedia.org/wiki/BibTeX) |
 | `bookdown-demo-rus.Rproj` | Файл проекта для RStudio |
 | `_bookdown.yml` | Настройки для bookdown документа в формате YAML (имя выходного файла, подписи рисунков, таблиц и листингов) |
 | `_build.sh` | Скрипт компиляции выходных документов |
@@ -45,8 +39,6 @@
   * `bookdown-demo-rus.epub`  - книга в формате ePub (формат `bookdown::epub_book`);
   * несколько `*.html` файлов, папка с иллюстрациями `figures`, папка  `libs` с библиотеками на языке JavaScript - книга в формате GitBook (`bookdown::gitbook`);
   * `bookdown-demo-rus.pdf` и `bookdown-demo-rus.tex`  книга в PDF (в зависимости от настроек соответствует формату `bookdown::pdf_book` или`bookdown::pdf_document2`) и соответствующий промежуточный LaTeX документ.
-
----
 
 # Быстрый старт
 
