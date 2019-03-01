@@ -50,7 +50,7 @@
 
 В случае локального варианта работы на локальный компьютер следует установить большое количество программного обеспечения:
 
-1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий WinMerge.
+1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/). 
 2. Язык программирования [R](https://cran.r-project.org/bin/windows/base/R-3.4.3-win.exe), [RStudio](https://www.rstudio.com/products/rstudio/download/#download) и набор типографских программ [TeXLive](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (около 4 Гб при полной установке) для создания выходных документов (можно не устанавливать, если не требуется поддержка PDF-формата).
 3. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
 
@@ -62,7 +62,7 @@
 
 В случае сетевого варианта работы на локальном компьютере выполняется редактирование текстовых файлов, а компиляция выходных документов выполняется на сервере GitLab. При этом список программного обеспечения для локальной установки существенно сокращается до следующих позиций:
 
-1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий WinMerge.
+1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/). 
 2. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
 
      > **Примечание**: инструкция по установке редактора ReText представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
