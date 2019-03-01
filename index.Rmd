@@ -6,7 +6,7 @@ date: "`r Sys.Date()`"
 papersize: a4
 geometry: 'left=2cm, right=1cm, top=2cm, bottom=2cm, twoside=false'
 
-documentclass: article
+documentclass: book
 toc-title: "Содержание"
 
 site: bookdown::bookdown_site
@@ -49,6 +49,10 @@ bibliography: bibliography.bib
 link-citations: yes
 
 csl: gost-r-7-0-5-2008-numeric.csl
+
+include-before:
+- \stepcounter{page} # инкримент номера страницы, поскольку титульный лист это страница 1
+  
 header-includes:
 - \usepackage[main=russian,english]{babel}
 - \usepackage{fontspec}
@@ -60,6 +64,7 @@ header-includes:
 #- \usepackage[none]{hyphenat} # отключение переносов, но так иногда получаются некоторые строки, выходящие за поля
 - \usepackage{indentfirst}
 - \setlength\parindent{12.7mm}
+- \pagestyle{plain} # номер страницы внизу по центру
 
 ---
 
