@@ -41,6 +41,7 @@ output:
   bookdown::epub_book: default
   bookdown::word_document2:
     reference_docx: styles-reference.docx
+    pandoc_args: --lua-filter=filter.lua
     toc: true
     toc_depth: 5
 indent: true
