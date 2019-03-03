@@ -270,10 +270,14 @@ f\left(k\right) =\binom{n}{k} p^k\left(1-p\right)^{n k}
 (\#eq:binom)
 \end{equation}
 
+При необходимости формула и ее номер могут быть правильно выравнены в MS Word с помощью применения пользовательского стиля *DisplayEquation*:
+
+::: {custom-style="DisplayEquation"}
 \begin{equation}
 S_{AM}\left( t \right) = U\left( 1+M\cdot F\left( t \right) \right)\cos \left( \omega_c\cdot t \right)
 (\#eq:am)
 \end{equation}
+:::
 
 Ссылка на формулу выполняется с помощью поля `\@ref(eq:name)`: ссылаемся на первое выражение - \@ref(eq:binom) и второе выражение \@ref(eq:am).
 
@@ -746,7 +750,6 @@ RStudio использует Pandoc для преобразования доку
 * оформление **формул**:  
   
   1. Преобразование всех формул из OMML в MathType (см. раздел \@ref(authoring-docx-math) выше).
-  1. Ручное редактирование формул - добавление табуляции после формулы и набор номера формулы в конце строки, удаление номера из формулы.
 
 * действия **перед печатью**:
 
