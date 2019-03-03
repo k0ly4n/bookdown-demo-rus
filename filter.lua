@@ -4,7 +4,7 @@
 local docx_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в docx
 
 --[[
-Функция для добавления точки в название рисунка.
+Функция для добавления точки название рисунка.
 Название рисунка содержится в таблице 'caption', она имеет следующий порядок элементов:
 
 "Figure 1 Label":
@@ -22,17 +22,5 @@ function Image(img)
       img.caption[3].text = img.caption[3].text .. docx_image_caption_separator;
       return img
     end
-  end
-end
-
---[[
-Функция для добавления пустой строки текста после таблицы.
-]]--
-function Table(tab)
-  if (FORMAT=="docx") then
-    return {
-      tab,
-      pandoc.Para{ pandoc.Str '' }
-      };
   end
 end
