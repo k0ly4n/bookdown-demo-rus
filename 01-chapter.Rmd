@@ -582,15 +582,15 @@ RMarkdown позволяет объединять в одном документ
 
 #### Установка под Windows {#software-r-windows}
 
-Поддерживается версия Windows Vista и выше.
+Поддерживается 64-битная версия Windows 7 и выше.
 
-1. Скачать R 3.4.3 for Windows с [официального сайта](https://cran.r-project.org/bin/windows/base/R-3.4.3-win.exe) и установить со всеми настройками по умолчанию.
+1. Скачать R 3.4.4 for Windows с [официального сайта](https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe) и установить со всеми настройками по умолчанию.
 
 1. Скачать редактор Notepad++ с [официального сайта](https://notepad-plus-plus.org/download/) и установить со всеми настройками по умолчанию.
 
 1. Для сборки демонстрационного примера потребуется скачать Git for Windows с [официального сайта](https://git-scm.com/download/win) и установить, выбрав на этапе *Choosing the default editor used by Git* пункт *Use Notepad++ as Git's default editor*.
 
-1. Скачать RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/#download) и запустить установку файла `RStudio-....exe` и дождаться ее завершения.
+1. Скачать RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/preview/) и запустить установку файла `RStudio-....exe` и дождаться ее завершения.
 
 1. Для сборки PDF-версии документа с помощью RStudio потребуется установить TeX-пакеты от проекта TeXLive.
     
@@ -610,6 +610,10 @@ RMarkdown позволяет объединять в одном документ
 1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команды в окне *Console*:
 
        install.packages("devtools")
+
+    > **Примечание:** при появлении запроса `Do you want to install from sources the package which needs compilation?
+y/n` на установку компилируемых пакетов следует ответить `n` (отказаться).
+
        devtools::install_github("rstudio/bookdown")
 
     и закрыть RStudio.
@@ -653,7 +657,11 @@ RMarkdown позволяет объединять в одном документ
 
        sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev libcairo2-dev
 
-1. Скачать RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/#download) и установить пакет *rstudio-xenial-...-amd64.deb* с помощью графической программы GDebi.
+1. Скачать актуальную версию конвертера Pandoc с [официального сайта](https://github.com/jgm/pandoc/releases) в виде deb-пакета и установить с помощью команды:
+
+       sudo apt-get install ./pandoc-2.6-1-amd64.deb
+
+1. Скачать RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/preview/) и установить пакет *rstudio-xenial-...-amd64.deb* с помощью графической программы GDebi.
 
 1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команды в окне *Console*:
 
