@@ -8,4 +8,4 @@ compile:
   - sh ./_build.sh
   artifacts:
     paths:
-    -  *.html _book/
+    - *.html _book/
