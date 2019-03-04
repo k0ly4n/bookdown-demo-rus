@@ -7,5 +7,5 @@ compile:
   script:  
   - sh ./_build.sh
   artifacts:
-    paths:
-    - *.html _book/
+    paths: 
+    - _book/ *.html
