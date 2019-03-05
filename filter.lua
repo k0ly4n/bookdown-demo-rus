@@ -5,6 +5,25 @@ local docx_image_caption_separator = "."; -- символ разделителя
 local docx_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в docx
 
 --[[
+Функция для рекурсивного прохода по всем элементам блока любого типа.
+Выводит древовидную структуру объектов.
+]]--
+local function RecursiveSearch(aTable, j)
+  if type(aTable) == "table" then
+    for key, value in pairs(aTable) do
+      print(string.rep('\t',j), key, value)
+        if(type(value) == "table") then
+            RecursiveSearch(value, j + 1)
+        else
+            print(string.rep('\t', j + 2), key, value)
+        end
+    end
+  else
+    --print(' ',aTable)
+  end
+end
+
+--[[
 Функция для добавления точки в название рисунка.
 Название рисунка содержится в таблице 'caption', она имеет следующий порядок элементов:
 
@@ -52,7 +71,7 @@ local debug = false
 function Math(m)
    if (FORMAT=="docx") and m.mathtype == "DisplayMath" then
       if debug then
-         RecursiveSearch(m);
+         RecursiveSearch(m, 1);
       end
 
       if debug then
@@ -95,25 +114,6 @@ function Math(m)
             }
       end
    end
-end
-
---[[
-Функция для рекурсивного прохода по всем элементам блока любого типа.
-Выводит древовидную структуру объектов.
-]]--
-local function RecursiveSearch(aTable, j)
-  if type(aTable) == "table" then
-    for key, value in pairs(aTable) do
-      print(string.rep('\t',j), key, value)
-        if(type(value) == "table") then
-            RecursiveSearch(value, j + 1)
-        else
-            print(string.rep('\t', j + 2), key, value)
-        end
-    end
-  else
-    --print(' ',aTable)
-  end
 end
 
 --[[
