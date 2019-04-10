@@ -397,19 +397,19 @@ F(x)= \prod_{n=1}^{\infty}\left(1 + \frac{x}{n!} \right)
 
 Функции:
 
-\begin{displaymath}
-    \lim_{n \to \infty} 
-    \sum_{k=1}^n \frac{1}{k^2} 
+\begin{equation}
+    \lim_{n \to \infty}
+    \sum_{k=1}^n \frac{1}{k^2}
     = \frac{\pi^2}{6}
-  \end{displaymath}
+\end{equation}
 
-\begin{displaymath}
+\begin{equation}
 \arg, \cos, \cosh, \cot, \coth, \csc,\det, \dim, \exp, \gcd, \hom, \inf,	\ker, \lg, \ln
-\end{displaymath}
+\end{equation}
 
-\begin{displaymath}
+\begin{equation}
 \log, \max, \min,	\sec, \sin, \sinh, \sup,\tan,	\tanh, \arccos, \arcsin, \arctan
-\end{displaymath}
+\end{equation}
 
 \begin{equation}
     \begin{matrix}
