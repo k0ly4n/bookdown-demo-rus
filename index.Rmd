@@ -1,6 +1,6 @@
 ---
-title: <center>Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ</center>
-author: <center>Н.О. Стрелков, В.В. Крутских</center>
+title: Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ
+author: Н.О. Стрелков, В.В. Крутских
 date: "`r Sys.Date()`"
 
 papersize: a4
