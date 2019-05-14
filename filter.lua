@@ -2,6 +2,7 @@
 -- Автор: Стрелков Н.О., <StrelkovNO@mpei.ru>
 
 local docx_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в docx
+local docx_table_caption_separator = ""; -- символ разделителя между номером таблицы и ее названием в docx
 local docx_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в docx
 
 --[[
@@ -27,10 +28,10 @@ end
 Функция для добавления точки в название рисунка.
 Название рисунка содержится в таблице 'caption', она имеет следующий порядок элементов:
 
-"Figure 1 Label":
+"Figure 1: Label":
 1	Figure
 2	nil
-3	1
+3	1:
 4	nil
 5	Label
 
@@ -39,6 +40,7 @@ end
 function Image(img)
   if img.title == 'fig:' and #img.caption >= 3 then
     if (FORMAT=="docx") then
+      img.caption[3].text = string.gsub(img.caption[3].text, ':', ''); -- обход исправления бага https://github.com/rstudio/bookdown/issues/618
       img.caption[3].text = img.caption[3].text .. docx_image_caption_separator;
       return img
     end
@@ -46,10 +48,15 @@ function Image(img)
 end
 
 --[[
-Функция для добавления пустой строки текста после таблицы.
+Функция для изменения оформления таблицы:
+1. удаление символа двоеточия (обход исправления бага https://github.com/rstudio/bookdown/issues/618) или его замена на docx_table_caption_separator
+2. добавление пустой строки текста после таблицы.
 ]]--
 function Table(tab)
   if (FORMAT=="docx") then
+    if #tab.caption >= 3 then
+      tab.caption[3].text = string.gsub(tab.caption[3].text, ':', docx_table_caption_separator);
+    end
     return {
       tab,
       pandoc.Para{ pandoc.Str '' }
