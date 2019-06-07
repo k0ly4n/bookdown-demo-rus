@@ -485,6 +485,19 @@ K(\omega)= \frac{U_{C}}{E}= \frac { \frac{1}{j\omega C}}{j \omega L+ \frac{1}{j\
 K(\omega)=  \frac {1}{1 -\omega^2 LC+j \omega RC}
 \end{equation}
 
+Формула с прямым русским (кириллическим) текстом:
+
+\begin{equation}
+U_\text{вых.} = U_\text{м} \cos(\omega t)
+\end{equation}
+
+Формула с курсивным русским (кириллическим) текстом:
+
+\begin{equation}
+U_\textit{вых.} = U_\textit{м} \cos(\omega t)
+\end{equation}
+
+
 ### Список литературы и библиографические ссылки {#markdown-syntax-bib}
 
 Список литературы задается в виде отдельного файла с записями в формате BibTeX (*.bib*). Пример фрагмента файла *bibliography.bib*:
