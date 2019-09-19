@@ -130,7 +130,7 @@ end
 function Div(d)
   if (FORMAT == "docx") then
     if d.attr.classes[1] == "example" then
-      d.content[1].content[1].content[4].text = d.content[1].content[1].content[4].text .. docx_listing_caption_separator;
+      d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', docx_listing_caption_separator);
       return d
     end
   end
