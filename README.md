@@ -23,13 +23,14 @@
 | `bookdown-demo-rus.Rproj` | Файл проекта для RStudio |
 | `_bookdown.yml` | Настройки для bookdown документа в формате YAML (имя выходного файла, подписи рисунков, таблиц и листингов) |
 | `_build.sh` | Скрипт компиляции выходных документов |
-| `filter.lua` | Файл Lua-фильтра для Pandoc, служит для автоматического редактирования docx документа в соответствии с ГОСТ |
+| `filter.lua` | Файл Lua-фильтра для Pandoc, служит для автоматического редактирования docx- и odt- документов приблеженно к ГОСТ |
 | `format.eqp` | Файл с настройками форматирования формул MathType |
 | `format.md` | Файл с требованиями к офомлению с соответствии с документом *Metodika_vkr.pdf* |
 | `.gitlab-ci.yml` | Файл в формате YAML с правилами автоматической сборки для GitLab CI/CD |
 | `gost-r-7-0-5-2008-numeric.csl` | Файл CSL-стиля для  формирования списка литературы по ГОСТ |
 | `README.md` | Этот документ |
 | `styles-reference.docx` | Шаблон документа MS Word со стилями оформления |
+| `styles-reference.odt` | Шаблон документа OpenDocument (LibreOffice.org Writer) со стилями оформления |
 | `TODO.md` | Файл TODO со списком задач, требующих решения |
 
 **Примечание**: после клонирования этого репозитория и запуска компиляции документа в программе RStudio с помощью кнопки *Build All* в списке файлов появятся следующие элементы:
@@ -38,6 +39,7 @@
 * папка `_book` со следующими файлами:
   * `bookdown-demo-rus.docx` - книга в формате docx (Microsoft Word) с учетом файла-шаблона *styles-reference.docx* (**в случае подготовки дипломов, отчетов и пособий это основной выходной формат** `bookdown::word_document2` );
   * `bookdown-demo-rus.epub`  - книга в формате ePub (формат `bookdown::epub_book`);
+  * `bookdown-demo-rus.odt` - книга в формате OpenDocument (LibreOffice.org Writer) с учетом файла-шаблона *styles-reference.odt* (*альфа-версия*, формат `bookdown::odt_document2`);
   * несколько `*.html` файлов, папка с иллюстрациями `figures`, папка  `libs` с библиотеками на языке JavaScript - книга в формате GitBook (`bookdown::gitbook`);
   * `bookdown-demo-rus.pdf` и `bookdown-demo-rus.tex`  книга в PDF (в зависимости от настроек соответствует формату `bookdown::pdf_book` или`bookdown::pdf_document2`) и соответствующий промежуточный LaTeX документ.
 

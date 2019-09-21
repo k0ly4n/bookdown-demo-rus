@@ -1,9 +1,14 @@
--- Файл с Lua-фильтрами для Pandoc. Будет использоваться для docx-файлов.
+-- Файл с Lua-фильтрами для Pandoc. Будет использоваться для docx- и odt-файлов.
 -- Автор: Стрелков Н.О., <StrelkovNO@mpei.ru>
 
 local docx_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в docx
 local docx_table_caption_separator = ""; -- символ разделителя между номером таблицы и ее названием в docx
 local docx_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в docx
+
+local odt_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в odt
+local odt_table_caption_separator = ""; -- символ разделителя между номером таблицы и ее названием в odt
+local odt_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в odt
+
 
 --[[
 Функция для рекурсивного прохода по всем элементам блока любого типа.
@@ -44,6 +49,12 @@ function Image(img)
       img.caption[3].text = img.caption[3].text .. docx_image_caption_separator;
       return img
     end
+
+    if (FORMAT=="odt") then
+      img.caption[3].text = string.gsub(img.caption[3].text, ':', ''); -- обход исправления бага https://github.com/rstudio/bookdown/issues/618
+      img.caption[3].text = img.caption[3].text .. odt_image_caption_separator;
+      return img
+    end
   end
 end
 
@@ -53,6 +64,7 @@ end
 2. добавление пустой строки текста после таблицы.
 ]]--
 function Table(tab)
+  -- docx
   if (FORMAT=="docx") then
     if #tab.caption >= 3 then
       tab.caption[3].text = string.gsub(tab.caption[3].text, ':', docx_table_caption_separator);
@@ -62,6 +74,18 @@ function Table(tab)
       pandoc.Para{ pandoc.Str '' }
       };
   end
+
+  -- odt
+  if (FORMAT=="odt") then
+    if #tab.caption >= 3 then
+      tab.caption[3].text = string.gsub(tab.caption[3].text, ':', odt_table_caption_separator);
+    end
+    return {
+      tab,
+      pandoc.Para{ pandoc.Str '' }
+      };
+  end
+
 end
 
 --[[
@@ -76,7 +100,7 @@ end
 local debug = false
 
 function Math(m)
-   if (FORMAT=="docx") and m.mathtype == "DisplayMath" then
+   if (FORMAT=="docx" or FORMAT=="odt") and m.mathtype == "DisplayMath" then
       if debug then
          RecursiveSearch(m, 1);
       end
@@ -128,9 +152,18 @@ end
 В промежуточном Markdown-коде содержит блок <div>...</div>.
 ]]--
 function Div(d)
+  -- docx
   if (FORMAT == "docx") then
     if d.attr.classes[1] == "example" then
       d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', docx_listing_caption_separator);
+      return d
+    end
+  end
+
+  -- odt
+  if (FORMAT == "odt") then
+    if d.attr.classes[1] == "example" then
+      d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', odt_listing_caption_separator);
       return d
     end
   end

@@ -44,6 +44,9 @@ output:
     pandoc_args: --lua-filter=filter.lua
     toc: true
     toc_depth: 5
+  bookdown::odt_document2:
+    reference_odt: styles-reference.odt
+    pandoc_args:  [--toc, --toc-depth=5, --lua-filter=filter.lua]
 indent: true
 
 bibliography: bibliography.bib
@@ -72,4 +75,3 @@ header-includes:
 # Аннотация {-#abstract}
 
 В настоящей работе рассматривается использование языка разметки Markdown для написания отчетов и дипломных работ. Используется расширение языка RMarkdown с дополнением bookdown. Демонстрируется применимость bookdown для оформления научных работ. Этот документ может быть использован как шаблон для подготовки текста работы.
-
