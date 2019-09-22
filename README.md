@@ -41,7 +41,7 @@
   * `bookdown-demo-rus.epub`  - книга в формате ePub (формат `bookdown::epub_book`);
   * `bookdown-demo-rus.odt` - книга в формате OpenDocument (LibreOffice.org Writer) с учетом файла-шаблона *styles-reference.odt* (*альфа-версия*, формат `bookdown::odt_document2`);
   * несколько `*.html` файлов, папка с иллюстрациями `figures`, папка  `libs` с библиотеками на языке JavaScript - книга в формате GitBook (`bookdown::gitbook`);
-  * `bookdown-demo-rus.pdf` и `bookdown-demo-rus.tex`  книга в PDF (в зависимости от настроек соответствует формату `bookdown::pdf_book` или`bookdown::pdf_document2`) и соответствующий промежуточный LaTeX документ.
+  * `bookdown-demo-rus.pdf` и `bookdown-demo-rus.tex`  книга в PDF (формат `bookdown::pdf_book`) и соответствующий промежуточный LaTeX документ.
 
 # Быстрый старт
 
