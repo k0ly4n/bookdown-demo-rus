@@ -667,8 +667,8 @@ y/n` на установку компилируемых пакетов след�
        cat <<EOF | sudo tee /etc/apt/sources.list.d/r-cran.list
        deb https://cloud.r-project.org/bin/linux/ubuntu xenial/
        EOF
-       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-       
+       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
        sudo apt-get update
        
        sudo apt-get install r-base-dev libssl-dev libjpeg62 libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 calibre
