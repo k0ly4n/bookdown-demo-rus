@@ -32,6 +32,9 @@
 | `styles-reference.docx` | Шаблон документа MS Word со стилями оформления |
 | `styles-reference.odt` | Шаблон документа OpenDocument (LibreOffice.org Writer) со стилями оформления |
 | `TODO.md` | Файл TODO со списком задач, требующих решения |
+| `install-remark.sh` | Скрипт установки remark-linter, служащего для проверки синтаксиса Markdown |
+| `run-remark.sh` | Скрипт для запуска remark-linter |
+| `.remarkrc` | Конфигурационный файл для remark-linter |
 
 **Примечание**: после клонирования этого репозитория и запуска компиляции документа в программе RStudio с помощью кнопки *Build All* в списке файлов появятся следующие элементы:
 
@@ -53,11 +56,11 @@
 
 В случае локального варианта работы на локальный компьютер следует установить большое количество программного обеспечения:
 
-1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/). 
-2. Язык программирования [R](https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe), [RStudio](https://www.rstudio.com/products/rstudio/download/preview/) и набор типографских программ [TeXLive](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (около 4 Гб при полной установке) для создания выходных документов (можно не устанавливать, если не требуется поддержка PDF-формата).
-3. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
+1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/).
+1. Язык программирования [R](https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe), [RStudio](https://www.rstudio.com/products/rstudio/download/preview/) и набор типографских программ [TeXLive](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (около 4 Гб при полной установке) для создания выходных документов (можно не устанавливать, если не требуется поддержка PDF-формата).
+1. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
 
-    >  **Примечание**: полная инструкция по установке необходимого набора программ представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
+    > **Примечание**: полная инструкция по установке необходимого набора программ представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
 
 Все изменения документов должны быть зафиксированы в системе Git и отправлены на сервер GitLab для хранения.
 
@@ -65,9 +68,10 @@
 
 В случае сетевого варианта работы на локальном компьютере выполняется редактирование текстовых файлов, а компиляция выходных документов выполняется на сервере GitLab. При этом список программного обеспечения для локальной установки существенно сокращается до следующих позиций:
 
-1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/). 
-2. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
+1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/).
+1. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
 
-     > **Примечание**: инструкция по установке редактора ReText представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
+    > **Примечание**: инструкция по установке редактора ReText представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
 
 Все изменения документов должны быть зафиксированы в системе Git и отправлены на сервер GitLab для компиляции и хранения.
+
