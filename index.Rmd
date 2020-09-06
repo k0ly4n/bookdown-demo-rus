@@ -55,7 +55,7 @@ include-before:
 header-includes:
 - \usepackage[main=russian,english]{babel}
 - \usepackage{fontspec}
-- \defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+#- \defaultfontfeatures{Ligatures={TeX},Renderer=Basic} # запрет смены кавычек
 - \setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
 - \setsansfont{CMU Sans Serif}
 - \setmonofont{Courier New}
