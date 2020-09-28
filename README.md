@@ -33,7 +33,9 @@
 | `styles-reference.odt` | Шаблон документа OpenDocument (LibreOffice.org Writer) со стилями оформления |
 | `TODO.md` | Файл TODO со списком задач, требующих решения |
 | `install-remark.sh` | Скрипт установки remark-linter, служащего для проверки синтаксиса Markdown |
-| `run-remark.sh` | Скрипт для запуска remark-linter |
+| `rule.rb` | Конфигурационный файл для mdl |
+| `run-mdl.sh` | Скрипт для запуска [mdl](https://snapcraft.io/mdl) |
+| `run-remark.sh` | Скрипт для запуска [remark-linter](https://www.npmjs.com/package/remark-lint) |
 | `.remarkrc` | Конфигурационный файл для remark-linter |
 
 **Примечание**: после клонирования этого репозитория и запуска компиляции документа в программе RStudio с помощью кнопки *Build All* в списке файлов появятся следующие элементы:
