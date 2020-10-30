@@ -60,26 +60,30 @@ end
 
 --[[
 Функция для изменения оформления таблицы:
-1. удаление символа двоеточия (обход исправления бага https://github.com/rstudio/bookdown/issues/618) или его замена на docx_table_caption_separator
+1. удаление символа двоеточия (обход исправления бага https://github.com/rstudio/bookdown/issues/618) или его замена на docx_table_caption_separator / odt_table_caption_separator
 2. добавление пустой строки текста после таблицы.
 ]]--
 function Table(tab)
-  -- docx
-  if (FORMAT=="docx") then
-    if #tab.caption >= 3 then
-      tab.caption[3].text = string.gsub(tab.caption[3].text, ':', docx_table_caption_separator);
-    end
-    return {
-      tab,
-      pandoc.Para{ pandoc.Str '' }
-      };
-  end
+  -- docx or odt
+  if (FORMAT=="docx" or FORMAT=="odt") then
+		if FORMAT=="docx" then
+			table_caption_separator = docx_table_caption_separator;
+		else
+			table_caption_separator = odt_table_caption_separator;
+		end
 
-  -- odt
-  if (FORMAT=="odt") then
-    if #tab.caption >= 3 then
-      tab.caption[3].text = string.gsub(tab.caption[3].text, ':', odt_table_caption_separator);
-    end
+	  if PANDOC_VERSION < { 2, 10 } then
+		  if #tab.caption >= 3 then
+		    tab.caption[3].text = string.gsub(tab.caption[3].text, ':', table_caption_separator);
+		  end
+		else
+			if #tab.caption.long >= 1 then
+				if #tab.caption.long[1].content >= 3 then
+					tab.caption.long[1].content[3].text = string.gsub(tab.caption.long[1].content[3].text, ':', table_caption_separator);
+				end
+			end
+		end
+
     return {
       tab,
       pandoc.Para{ pandoc.Str '' }
