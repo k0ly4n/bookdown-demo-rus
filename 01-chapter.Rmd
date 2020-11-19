@@ -262,6 +262,40 @@ language:
 
 Текст в таблицах может иметь форматирование.
 
+В некоторых случаях требуется поместить несколько строк текста в одну ячейку таблицы. При этом используется другой способ задания таблиц, который показан ниже при оформлении таблицы \@ref(tab:soft-math-tab).
+
+Table: (\#tab:soft-math-tab) Программы и языки программирования для математических расчетов
+
++----------------+-------------------------------------------------------------+-------------------------------------------------------------+
+|                | **Визуальные**                                              | **Текстовые**                                               |
++===============:+:============================================================+:============================================================+
+| **Платные**    | * [PTC MathCAD](http://www.ptc.com/product/mathcad)         | * [MathWorks MATLAB](http://www.mathworks.com) |
+|                | * [Wolfram Mathematica](http://www.wolfram.com/mathematica) |                                                |
+|                | * [Waterloo Maple](http://www.maplesoft.com)                |                                                |
+|                |                                                             |                                                |
+|                |                                                             |                                                |
+|                |                                                             |                                                |
++----------------+-------------------------------------------------------------+-------------------------------------------------------------+
+| **Бесплатные** | * [SMath Studio](http://smath.info)                         | * [Scilab](http://scilab.org/) |
+|                | * [WolframAlpha](http://www.wolframalpha.com)               | * [GNU Octave](https://www.gnu.org/software/octave/) |
+|                | * [wxMaxima](http://andrejv.github.io/wxmaxima)             | * [Sage](http://www.sagemath.org/) |
+|                |                                                             | * [FreeMAT](http://freemat.sourceforge.net/) |
+|                |                                                             | * [Axiom](http://axiom-developer.org) |
+|                |                                                             | * [Reduce](https://reduce-algebra.sourceforge.io) |
+|                |                                                             | * [Euler Math Toolbox](http://euler.rene-grothmann.de/index.html) |
+|                |                                                             | * [Julia](http://julialang.org/) |
+|                |                                                             | * [Spyder - The Scientific PYthon Development EnviRonment](https://code.google.com/p/spyderlib/) |
+|                |                                                             | * [R](https://cran.rstudio.com/), [RStudio](https://rstudio.com/products/rstudio/) |
+|                |                                                             | * написание программ на языках [Fortran](http://en.wikipedia.org/wiki/Fortran), |
+|                |                                                             | [C](http://en.wikipedia.org/wiki/C_(programming_language))/[C++](http://en.wikipedia.org/wiki/C++) с |
+|                |                                                             | библиотеками [LAPACK](http://www.netlib.org/lapack/), [BLAS](http://www.netlib.org/blas/), |
+|                |                                                             | [ATLAS](http://math-atlas.sourceforge.net/), |
+|                |                                                             | [MINPACK](http://www.netlib.org/minpack/), [NETLIB.org](http://netlib.org/), |
+|                |                                                             | [Armadillo](http://arma.sourceforge.net/) |
++----------------+-------------------------------------------------------------+-------------------------------------------------------------+
+                                                                                     
+> Примечание: еще большее количество типов таблиц можно найти внутри документа [проекта GostDown](https://gitlab.iaaras.ru/iaaras/gostdown/blob/master/demo-main.md) или в [соответствующем разделе документации по Pandoc](https://pandoc.org/MANUAL.html#tables).
+
 ### Формулы {#markdown-syntax-math}
 
 Формулы без нумерации и расположенные непосредственно могут быть набраны в одиночных знаках доллара, например, $a^2 + b^2 = c^2$.
