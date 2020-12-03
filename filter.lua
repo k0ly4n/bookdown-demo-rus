@@ -117,7 +117,7 @@ function Math(m)
 
       -- строки для поиска
       qquad_pattern = '\\qquad' -- разделитель формулы и номера
-      number_pattern = '[(]%d+[)]'  -- номер
+      number_pattern = '[(].+[)]'  -- номер
       full_pattern = qquad_pattern .. number_pattern; -- полный шаблон = разделитель + номер
 
       -- ищем полный шаблон
