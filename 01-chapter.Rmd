@@ -6,7 +6,7 @@
 
 > John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax, with the goal of enabling people "to write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid XHTML (or HTML)".
 
-Официальный логотип языка Markdown представлен на рисунке ![](figures/Markdown-mark.svg.png) .
+Официальный логотип языка Markdown представлен на рисунке ![](figures/Markdown-mark.png) .
 
 В настоящее время язык широко используется следующими сайтами и организациями:
 
@@ -175,17 +175,17 @@
 
 ### Изображения {#markdown-syntax-media}
 
-Простой Markdown не позволяет выполнять автоматическую нумерацию рисунков, но позволяет вставить **рисунок** c подписью. Далее следует рисунок с названием *Markdown*, сохраненный в файле **figures/Markdown-mark.svg.png**:
+Простой Markdown не позволяет выполнять автоматическую нумерацию рисунков, но позволяет вставить **рисунок** c подписью. Далее следует рисунок с названием *Markdown*, сохраненный в файле **figures/Markdown-mark.png**:
 
-![Markdown](figures/Markdown-mark.svg.png)
+![Markdown](figures/Markdown-mark.png)
 
 Рисунок может не иметь названия, тогда код упрощается:
 
-![](figures/Markdown-mark.svg.png)
+![](figures/Markdown-mark.png)
 
 Автоматическая нумерация рисунков выполняется с помощью метки `fig`, поэтому рисунок с автоматической нумерацией и идентификатором `md-logo` может быть вставлен следующим образом:
 
-![(\#fig:md-logo) Логотип Markdown](figures/Markdown-mark.svg.png)
+![(\#fig:md-logo) Логотип Markdown](figures/Markdown-mark.png)
 
 Ссылка на такой рисунок будет иметь вид: на рисунке \@ref(fig:md-logo) представлен логотип языка разметки Markdown.
 
@@ -201,15 +201,15 @@ language:
 
 Пример задания ширины изображения:
 
-![(\#fig:md-logo-w-1cm) Логотип Markdown шириной 1 см](figures/Markdown-mark.svg.png){width=1cm}
+![(\#fig:md-logo-w-1cm) Логотип Markdown шириной 1 см](figures/Markdown-mark.png){width=1cm}
 
 Пример задания высоты изображения:
 
-![(\#fig:md-logo-h-2cm) Логотип Markdown высотой 2 см](figures/Markdown-mark.svg.png){height=2cm}
+![(\#fig:md-logo-h-2cm) Логотип Markdown высотой 2 см](figures/Markdown-mark.png){height=2cm}
 
 Пример задания ширины и высоты изображения:
 
-![(\#fig:md-logo-w-64mm-h-39mm) Логотип Markdown шириной 64 мм и высотой 39 мм](figures/Markdown-mark.svg.png){width=64mm, height=39mm}
+![(\#fig:md-logo-w-64mm-h-39mm) Логотип Markdown шириной 64 мм и высотой 39 мм](figures/Markdown-mark.png){width=64mm, height=39mm}
 
 ### Таблицы {#markdown-syntax-tables}
 
