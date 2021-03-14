@@ -72,7 +72,7 @@ function Table(tab)
 			table_caption_separator = odt_table_caption_separator;
 		end
 
-	  if PANDOC_VERSION < { 2, 10 } then
+        if (PANDOC_VERSION[1] >= 2) and (PANDOC_VERSION[2] <= 10) then
 		  if #tab.caption >= 3 then
 		    tab.caption[3].text = string.gsub(tab.caption[3].text, ':', table_caption_separator);
 		  end
