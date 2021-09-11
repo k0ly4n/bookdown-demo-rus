@@ -156,18 +156,28 @@ end
 В промежуточном Markdown-коде содержит блок <div>...</div>.
 ]]--
 function Div(d)
-  -- docx
-  if (FORMAT == "docx") then
-    if d.attr.classes[1] == "example" then
-      d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', docx_listing_caption_separator);
-      return d
+  -- docx or odt
+  if (FORMAT=="docx" or FORMAT=="odt") then
+    if FORMAT=="docx" then
+      listing_caption_separator = docx_listing_caption_separator
+    else
+      listing_caption_separator = odt_listing_caption_separator
     end
-  end
 
-  -- odt
-  if (FORMAT == "odt") then
     if d.attr.classes[1] == "example" then
-      d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', odt_listing_caption_separator);
+      -- knitr <=1.33, bookdown <=0.21
+      if type(d.content[1].content[1].content[4].text) == "string" then
+          d.content[1].content[1].content[4].text = string.gsub(d.content[1].content[1].content[4].text, ':', listing_caption_separator);
+      else
+          -- knitr >1.33, bookdown >0.21
+          if type(d.content[1].content[1].content[5].text) == "string" then
+            if string.find(d.content[1].content[1].content[5].text, ':') then
+              d.content[1].content[1].content[5].text = string.gsub(d.content[1].content[1].content[5].text, ':', listing_caption_separator);
+            else
+              d.content[1].content[1].content[5].text = d.content[1].content[1].content[5].text .. listing_caption_separator;
+            end
+          end
+      end
       return d
     end
   end
