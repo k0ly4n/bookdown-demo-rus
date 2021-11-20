@@ -28,7 +28,7 @@ output:
     number_sections: yes
     latex_engine: xelatex
     toc_depth: 5
-  bookdown::html_document2: 
+  bookdown::html_document2:
     toc: true
     toc_float: true
     theme: default
@@ -42,6 +42,8 @@ output:
   bookdown::odt_document2:
     reference_odt: styles-reference.odt
     pandoc_args:  [--toc, --toc-depth=5, --lua-filter=filter.lua]
+    toc: true
+    toc_depth: 5
 indent: true
 
 bibliography: bibliography.bib
