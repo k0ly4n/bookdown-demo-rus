@@ -59,7 +59,7 @@
 В случае локального варианта работы на локальный компьютер следует установить большое количество программного обеспечения:
 
 1. [Git](https://git-scm.com/download) для клонирования этого репозитория. Опционально выполняется установка редактора [Notepad++](https://notepad-plus-plus.org/download/)  и программы сравнения ревизий [WinMerge](http://winmerge.org/) или [Meld](http://meldmerge.org/).
-1. Язык программирования [R](https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe), [RStudio](https://www.rstudio.com/products/rstudio/download/preview/) и набор типографских программ [TeXLive](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (около 4 Гб при полной установке) для создания выходных документов (можно не устанавливать, если не требуется поддержка PDF-формата).
+1. Язык программирования [R](https://cran.r-project.org/bin/windows/base/old/4.0.5/R-4.0.5-win.exe), [R for Windows Build Tools](https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe), [RStudio](https://www.rstudio.com/products/rstudio/download/#download) и набор типографских программ [TeXLive](https://www.tug.org/texlive/acquire-iso.html#torrent) (около 8 Гб при полной установке) для создания выходных документов (можно не устанавливать, если не требуется поддержка PDF-формата).
 1. Markdown редактор ([ReText](https://github.com/retext-project/retext) или [Typora](https://typora.io)) для редактирования Rmd-документов.
 
     > **Примечание**: полная инструкция по установке необходимого набора программ представлена в документе [`01-chapter.Rmd`](01-chapter.Rmd) в разделе *Необходимое программное обеспечение*.
