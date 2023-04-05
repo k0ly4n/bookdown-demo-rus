@@ -1,13 +1,13 @@
 -- Файл с Lua-фильтрами для Pandoc. Будет использоваться для docx- и odt-файлов.
 -- Автор: Стрелков Н.О., <StrelkovNO@mpei.ru>
 
-local docx_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в docx
-local docx_table_caption_separator = ""; -- символ разделителя между номером таблицы и ее названием в docx
-local docx_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в docx
+local docx_image_caption_separator = " –"; -- символ разделителя между номером рисунка и его названием в docx
+local docx_table_caption_separator = " –"; -- символ разделителя между номером таблицы и ее названием в docx
+local docx_listing_caption_separator = " –"; -- символ разделителя между номером листинга и его названием в docx
 
-local odt_image_caption_separator = "."; -- символ разделителя между номером рисунка и его названием в odt
-local odt_table_caption_separator = ""; -- символ разделителя между номером таблицы и ее названием в odt
-local odt_listing_caption_separator = "."; -- символ разделителя между номером листинга и его названием в odt
+local odt_image_caption_separator = " –"; -- символ разделителя между номером рисунка и его названием в odt
+local odt_table_caption_separator = " –"; -- символ разделителя между номером таблицы и ее названием в odt
+local odt_listing_caption_separator = " –"; -- символ разделителя между номером листинга и его названием в odt
 
 
 --[[

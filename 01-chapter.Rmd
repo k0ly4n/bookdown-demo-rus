@@ -15,7 +15,7 @@
 * [GitLab.com](https://about.gitlab.com/) - система упраления проектами с поддержкой Git-репозиториев;
 * [Atlassian JIRA](https://www.atlassian.com/software/jira) - система управления задачами и проектами;
 * [WordPress.com](https://wordpress.com/) - веб-платформа для создания сайтов и блогов;
-* [StackOverflow.com](https://stackoverflow.com/) - сеть сайтов вопросов и ответов по множеству тематик (например, AskUbuntu.com для пользователей Ubuntu).
+* [StackOverflow.com](https://stackoverflow.com/) - сеть сайтов вопросов и ответов по множеству тематик.
 
 Язык Markdown обладает следующими преимуществами:
 
@@ -194,7 +194,7 @@
 ```
 language:
   label:
-    fig: 'Рис. '
+    fig: 'Рисунок '
 ```
 
 Для каждого рисунка могут быть принудительно заданы его размеры с помощью соответствующих атрибутов `width` или `height` внутри фигурных скобок после описания изображения. Поддерживаются следующие единицы измерения `px`, `cm`, `mm`, `in` / `inch` и `%`. Для сохранения пропорций рекомендуется задавать один размер (ширину или высоту).
@@ -236,10 +236,7 @@ language:
 
 Автоматическая нумерация таблиц выполняется с помощью метки `tab` аналогично рисункам.
 
-Для следования ГОСТ необходимо в строке с меткой добавить два пробела для перевода текста названия на следующую строку:
-
-Table: (\#tab:uno-tech)  
-Технические характеристики платы Arduino Uno R3
+Table: (\#tab:uno-tech) Технические характеристики платы Arduino Uno R3
 
 | **Параметр**                               | **Значение** |
 |--------------------------------------------|--------------|
@@ -634,7 +631,7 @@ RMarkdown позволяет объединять в одном документ
 
 Для редактирования полученного docx-файла необходим Microsoft Office 2007 (с SP3 и со всеми обновлениями) или более новой версии.
 
-Для работы с формулами внутри docx-файла необходим MathType 6.9b.
+Для работы с формулами внутри docx-файла необходим MathType версии 6.9 и выше.
 
 ### R, RStudio, TeXLive {#software-r}
 
@@ -650,12 +647,14 @@ RMarkdown позволяет объединять в одном документ
 
 1. Для сборки демонстрационного примера потребуется загрузить Git for Windows с [официального сайта](https://git-scm.com/download/win) и установить, выбрав на этапе *Choosing the default editor used by Git* пункт *Use Notepad++ as Git's default editor*.
 
+1. Для удобства работы с Git-репозиториями рекомендуется дополнительно загрузить с [официального сайта](https://tortoisegit.org/download/) и установить расширение TortoiseGit для Проводника.
+
 1. Загрузить RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/#download) и запустить установку файла `RStudio-....exe` и дождаться ее завершения.
 
 1. Для сборки PDF-версии документа с помощью RStudio потребуется установить TeX-пакеты от проекта TeXLive.
 
     > **Примечание:** в сети попадаются инструкции по использованию под Windows дистрибутива [MikTeX](https://miktex.org/howto/install-miktex), но он не работает нормально совместно с RStudio.  
-    > В Ubuntu применяется TeXLive, поэтому будем использовать именно его и под Windows.
+    > В дистрибутивах GNU/Linux применяется TeXLive, поэтому будем использовать именно его и под Windows.
 
     Установка TeXLive требует следующих действий:
 
@@ -665,10 +664,10 @@ RMarkdown позволяет объединять в одном документ
     1. В открывшемся окне нажать кнопку *Установить*.
     1. По окончанию установки нажать кнопку *Закрыть*.
 
-1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команды в окне *Console*:
+1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив последовательно команду в окне *Console*:
 
-       install.packages(c('bookdown', 'tikzDevice'))
-
+       install.packages(c('markdown', 'bookdown', 'tikzDevice'), repos='http://cran.r-project.org')
+      
     и закрыть RStudio.
 
 1. Для подготовки первого RMarkdown документа следует клонировать [демонстрационный русифицированный репозиторий](https://github.com/k0ly4n/bookdown-demo-rus) с помощью Git - открыть Проводник, нажать правую кнопку мыши, выбрать в выпадающем меню пункт *Git Bash Here*, вставить в командную строку команду
@@ -687,66 +686,83 @@ RMarkdown позволяет объединять в одном документ
     По завершению сборки откроется HTML-версия книги.
 
     > **Примечание:** если требуется подготовка книги в EPUB-формате (*bookdown:epub_book*), то для просмотра этого формата
-    > нужно установить дополнительный просмотрщик. Например, простой и легковесный [Sumatra PDF](https://kjkpub.nyc3.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.1.2-install.exe).
+    > нужно установить дополнительный просмотрщик. Например, простой и легковесный [Sumatra PDF](https://www.sumatrapdfreader.org/dl/rel/3.4.6/SumatraPDF-3.4.6-64-install.exe).
 
 1. Для сборки PDF-версии документа следует выбрать в верхней правой части окна RStudio вкладку *Build* и нажать стрелку вниз рядом с пунктом *Build Book* и выбрать пункт *bookdown:pdf_book*.
 
-#### Установка под Ubuntu {#software-r-ubuntu}
+#### Установка под GNU/Linux {#software-r-linux}
 
-Будем считать, что используется 64-битная версия Ubuntu 18.04 LTS. Процесс установки сводится к следующим шагам:
 
-1. Установить язык R из официального репозитория:
+В настоящее время существует два скрипта автоматизированной установки необходимого программного обеспечения:
 
-       sudo apt-get update
-       sudo apt-get dist-upgrade
-       sudo apt-get install r-base-dev
+1. [umpis](https://github.com/N0rbert/umpis) предназначен для систем на основе дистрибутива Debian, он поддерживает системы Debian (9, 10, 11 и 12), AstraLinux (2.12 и 1.7), Ubuntu MATE (18.04 LTS, 20.04 LTS и 22.04 LTS).
+1. [alpis](https://github.com/N0rbert/alpis) - для систем ALT Linux, созданных на основе 9-й и 10-й платформ (Workstation, MATE StarterKit и SimplyLinux).
 
-1. Установить компоненты TeXLive, шрифты и другие необходимые пакеты с помощью команды
+Многолетний опыт автора настоящего документа позволяет рекомендовать среду рабочего стола MATE для повседневного и повсеместного использования. В следующем подразделе приведены в том числе команды для установки среды MATE в систему Debian.
 
-       sudo apt-get install texlive-extra-utils biber texlive-lang-cyrillic fonts-cmu texlive-xetex texlive-fonts-extra texlive-science-doc texlive-science font-manager ttf-mscorefonts-installer texlive-latex-extra lmodern ttf-mscorefonts-installer evince
+##### Установка под Debian {#software-r-linux-debian}
 
-1. Установить следующие зависимости для сборки специализированных пакетов для R:
+В системах Debian рекомендуется предварительно настроить использование команды `sudo` с помощью выполнения следующих команд, запущенных от имени пользователя *root*:
 
-       sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libxml2-dev libcairo2-dev git
+```
+apt-get update
+apt-get install sudo
+```
 
-1. Загрузить актуальную версию конвертера Pandoc с [официального сайта](https://github.com/jgm/pandoc/releases) в виде deb-пакета и установить пакет *pandoc-...amd64.deb* с помощью графической программы GDebi или команды вида
+и затем добавить пользователя в группу *sudo* командой `su -c "usermod -a -G sudo $USER"`, выполненной от обычного пользователя, и перезагрузить компьютер.
 
-       sudo apt-get install ./pandoc*amd64.deb
+После этого среда MATE может быть установлена с помощью команды `sudo apt-get install task-mate-desktop mate-desktop-environment-extras`.
 
-1. Загрузить RStudio с [официального сайта](https://www.rstudio.com/products/rstudio/download/#download) в виде deb-пакета и установить пакет *rstudio-...-amd64.deb* с помощью графической программы GDebi  или команды вида
+Для запуска скрипта `umpis.sh` в графической сессии MATE следует выполнить следующие команды в терминале:
 
-       sudo apt-get install ./rstudio*amd64.deb
+```
+sudo apt-get update
+sudo apt-get install wget dconf-cli
 
-1. Запустить RStudio и установить пакеты R для поддержки [bookdown](https://bookdown.org/home/getting-started.html) через командную строку внутри RStudio, выполнив команду в окне *Console*:
+cd ~/Downloads || cd ~/Загрузки
+wget -c https://raw.githubusercontent.com/N0rbert/umpis/master/umpis.sh
+chmod +x umpis.sh
+sudo -E ./umpis.sh
+```
 
-       install.packages(c('bookdown', 'tikzDevice'))
+Большую часть времени скрипт работает автономно без участия пользователя. На финальном этапе скрипт задаст вопрос о выборе экрана входа в систему, на который нужно ответить выбором пункта *sddm*; запросит у пользователя его пароль для установки среды программирования Arduino IDE и путь к каталогу ее установки. После окончания работы скрипта нужно перезагрузить компьютер, на экране входа выбрать сеанс MATE и авторизоваться.
 
-    и закрыть RStudio.
+##### Установка под ALT Linux {#software-r-linux-alt}
 
-1. Для подготовки первого RMarkdown документа следует клонировать [демонстрационный русифицированный репозиторий](https://github.com/k0ly4n/bookdown-demo-rus) с помощью Git - выполнить в терминале в удобном каталоге команду
+В системах ALT Linux Workstation и MATE StarterKit рекомендуется предварительно настроить использование команды `sudo` с помощью выполнения следующей команды, запущенной от обычного пользователя:
 
-       git clone https://github.com/k0ly4n/bookdown-demo-rus
+```
+su -l -c "usermod -a -G wheel $USER; control sudo wheelonly; control sudoers relaxed; control sudoreplay wheelonly; control sudowheel enabled;"
+```
 
-1. Перейти в только что созданный каталог `bookdown-demo-rus` в графическом файловом менеджере и выполнить двойной щелчок мышью по файлу `bookdown-demo-rus.Rproj` для открытия проекта книги в RStudio.
+Для запуска скрипта `alpis.sh` в графической сессии MATE следует выполнить следующие команды в терминале:
 
-1. Дождаться открытия RStudio, выбрать в верхней правой части окна вкладку *Build* и нажать стрелку вниз рядом с пунктом *Build Book* и выбрать пункт *All Formats* для подготовки всех форматов книги (или нажать `<Ctrl>+<Shift>+<B>`).
+```
+sudo apt-get update
+sudo apt-get install wget lsb-release
 
-    > **Примечание:** возможно появление окна *Install Required Packages*,
-    > в котором нужно нажать кнопку *Yes* для установки пакетов.
+cd ~/Downloads || cd ~/Загрузки
+wget -c https://raw.githubusercontent.com/N0rbert/alpis/master/alpis.sh
+chmod +x alpis.sh
+sudo -E ./alpis.sh
+```
+
+Скрипт работает автономно. После окончания его работы нужно перезагрузить компьютер, на экране входа выбрать сеанс MATE и авторизоваться.
 
 ### Текстовый редактор ReText {#software-retext}
 
-Редактирование отдельных Markdown файлов можно выполнять в простом визуальном редакторе [ReText](https://github.com/retext-project/retext).
+Редактирование отдельных Markdown файлов можно выполнять в простом визуальном редакторе [ReText](https://github.com/retext-project/retext). В зависимости от версии Windows его установка выполняется следующим образом:
 
-Для Windows нужно установить [Python 3.7.9](https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe) (поставив галочку *Add Python 3.7 to PATH*) и затем установить ReText из репозитория pip с помощью команды `pip install ReText pyqtwebengine`. После установки редактор можно запустить командой `retext` и создать затем ярлык для программы.
+* в Windows 7 нужно установить [Python 3.8.10](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe) (поставив галочку *Add Python 3.8 to PATH*) и затем установить ReText из репозитория PyPi с помощью команды `pip install ReText==7.2.3 pyqtwebengine==5.15.2`. 
+* в более новых версиях Windows нужно установить [актуальную версию Python](https://www.python.org/downloads/windows/) и затем установить ReText из репозитория PyPi с помощью команды `pip install ReText pyqt6-webengine`.
 
-> **Примечание:** в случае если при открытии редактора не отображаются пиктограммы в его интерфейсе, следует загрузить [архив с ними](https://codeload.github.com/retext-project/retext/tar.gz/icons), создать каталог `C:\Users\%username%\AppData\Local\Programs\Python\share\retext\icons` и  распаковать его содержимое архива в него.
+После установки редактор ReText можно запустить командой `retext` и создать затем ярлык для программы.
 
 > **Примечание:** в случае если при открытии документа с русским текстом символы в редакторе отображаются некорректно, следует изменить шрифты на поддерживающие кириллицу.
 > Для этого следует нажать в меню **Edit** на пункт **Change editor font** для смены шрифта в редакторе и выбрать нужный шрифт (обычно моноширинный, например *Courier New*).  
 > Далее следует повторить действия для шрифта предварительного просмотра **Change preview font** и выбрать нужный шрифт (обычно не моноширинный, например *Times New Roman*).
 
-Для Ubuntu редактор содержится в репозитории под именем пакета `retext`. Более новая версия доступна через pip - установка с помощью `pip3 install --user ReText PyQt5==5.11.2`. Для поддержки проверки орфографии нужно установить специальный пакет командой `sudo apt-get install python3-enchant`.
+В системах GNU/Linux редактор содержится в репозиториях под именем пакета `retext`. Для поддержки проверки орфографии нужно установить специальный пакет командой `sudo apt-get install python3-enchant` (Debian) или `sudo apt-get install python3-module-enchant` (ALT Linux).
 
 Следует учитывать, что редактор ReText не поддерживает расширения RMarkdown. Однако, это не мешает их использованию и набору в тексте.
 
