@@ -29,6 +29,8 @@ local function RecursiveSearch(aTable, j)
   end
 end
 
+local debug = false
+
 --[[
 Функция для добавления точки в название рисунка.
 Название рисунка содержится в таблице 'caption', она имеет следующий порядок элементов:
@@ -43,16 +45,38 @@ end
 Поэтому точка должна быть добавлена к третьему элементу.
 ]]--
 function Image(img)
-  if img.title == 'fig:' and #img.caption >= 3 then
-    if (FORMAT=="docx") then
-      img.caption[3].text = string.gsub(img.caption[3].text, ':', ''); -- обход исправления бага https://github.com/rstudio/bookdown/issues/618
-      img.caption[3].text = img.caption[3].text .. docx_image_caption_separator;
-      return img
-    end
+  -- docx or odt
+  if (FORMAT=="docx" or FORMAT=="odt") then
+		if FORMAT=="docx" then
+			image_caption_separator = docx_image_caption_separator;
+		else
+			image_caption_separator = odt_image_caption_separator;
+		end
 
-    if (FORMAT=="odt") then
-      img.caption[3].text = string.gsub(img.caption[3].text, ':', ''); -- обход исправления бага https://github.com/rstudio/bookdown/issues/618
-      img.caption[3].text = img.caption[3].text .. odt_image_caption_separator;
+    if img.title == 'fig:' and #img.caption >= 3 then
+      if debug then
+        RecursiveSearch(img.caption, 1);
+      end
+
+      fig_index_idx = 3
+
+      if img.caption[fig_index_idx].text ~= nil then
+        fi3 = string.find(img.caption[fig_index_idx].text, ":")
+      end
+      if img.caption[fig_index_idx+1].text ~= nil then
+        fi4 = string.find(img.caption[fig_index_idx+1].text, ":")
+
+        if fi3 == nil and fi4 > 0 then
+          fig_index_idx = 4
+        end
+      end -- исправление бага, созданного в https://github.com/rstudio/bookdown/releases/tag/v0.34
+
+      if debug then
+        print(fi3, fi4)
+      end
+
+      img.caption[fig_index_idx].text = string.gsub(img.caption[fig_index_idx].text, ':', ''); -- обход исправления бага https://github.com/rstudio/bookdown/issues/618
+      img.caption[fig_index_idx].text = img.caption[fig_index_idx].text .. image_caption_separator;
       return img
     end
   end
@@ -72,14 +96,36 @@ function Table(tab)
 			table_caption_separator = odt_table_caption_separator;
 		end
 
-        if (PANDOC_VERSION[1] >= 2) and (PANDOC_VERSION[2] < 10) then
+    if (PANDOC_VERSION[1] >= 2) and (PANDOC_VERSION[2] < 10) then
 		  if #tab.caption >= 3 then
 		    tab.caption[3].text = string.gsub(tab.caption[3].text, ':', table_caption_separator);
 		  end
 		else
 			if #tab.caption.long >= 1 then
 				if #tab.caption.long[1].content >= 3 then
-					tab.caption.long[1].content[3].text = string.gsub(tab.caption.long[1].content[3].text, ':', table_caption_separator);
+				  if debug then
+				    RecursiveSearch(tab.caption.long[1].content, 1)
+				  end
+
+		      tab_index_idx = 3
+
+          if tab.caption.long[1].content[tab_index_idx].text ~= nil then
+            ti3 = string.find(tab.caption.long[1].content[tab_index_idx].text, ":")
+          end
+          if tab.caption.long[1].content[tab_index_idx+1].text ~= nil then
+            ti4 = string.find(tab.caption.long[1].content[tab_index_idx+1].text, ":")
+
+            if ti3 == nil and ti4 > 0 then
+              tab_index_idx = 4
+            end
+          end -- исправление бага, созданного в https://github.com/rstudio/bookdown/releases/tag/v0.34
+
+          if debug then
+            print(ti3, ti4)
+          end
+
+
+					tab.caption.long[1].content[tab_index_idx].text = string.gsub(tab.caption.long[1].content[tab_index_idx].text, ':', table_caption_separator);
 				end
 			end
 		end
@@ -101,7 +147,6 @@ end
 2. по правому краю
 
 ]]--
-local debug = false
 
 function Math(m)
    if (FORMAT=="docx" or FORMAT=="odt") and m.mathtype == "DisplayMath" then
