@@ -709,7 +709,7 @@ apt-get update
 apt-get install sudo
 ```
 
-и затем добавить пользователя в группу *sudo* командой `su -c "usermod -a -G sudo $USER"`, выполненной от обычного пользователя, и перезагрузить компьютер.
+и затем добавить пользователя в группу *sudo* командой `su -l -c "usermod -a -G sudo $USER"`, выполненной от обычного пользователя, и перезагрузить компьютер.
 
 После этого среда MATE может быть установлена с помощью команды `sudo apt-get install task-mate-desktop mate-desktop-environment-extras`.
 
